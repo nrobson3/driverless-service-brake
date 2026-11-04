@@ -45,14 +45,14 @@ BO_ 274 ASB_SB_Diag: 8 ASB_SBC
 CM_ BU_ AS_COMPUTER "Autonomous-system computer (controller node via the vehicle CAN gateway).";
 CM_ BU_ ASB_SBC "Service-brake controller: reads 2x brake-pressure sensors, drives the CAN servo on a private bus.";
 CM_ BO_ 272 "Service-brake command, 100 Hz. Frames with a bad CRC8 or a repeated alive counter count as missing.";
-CM_ BO_ 273 "Service-brake status, 100 Hz. Also the SBC heartbeat for the AS supervisor (lost after 50 ms).";
+CM_ BO_ 273 "Service-brake status, 100 Hz. Also the SBC heartbeat for the DS supervisor (lost after 50 ms).";
 CM_ BO_ 274 "Service-brake diagnostics, 20 Hz.";
 CM_ SG_ 272 SB_PressureReq "Front-circuit line pressure setpoint.";
 CM_ SG_ 272 SB_ModeReq "0 PARK (back off fully), 1 READY (crank 0.5 mm short of contact), 2 ACTIVE (pressure control).";
 CM_ SG_ 272 SB_RampLimit "Max setpoint slew; 0 selects the default 600 bar/s.";
 CM_ SG_ 272 SB_CRC8 "SAE J1850 CRC-8 (poly 0x1D, init 0xFF, xor-out 0xFF) over bytes 0-6.";
 CM_ SG_ 273 SB_OverrideFlag "Latched when the driver brakes harder than commanded; cleared by a zero command.";
-CM_ SG_ 273 SB_ActuatorPowered "Read back from the hardware power interlock (actuator supply only with ASMS on).";
+CM_ SG_ 273 SB_ActuatorPowered "Read back from the hardware power interlock (actuator supply only with DSMS on).";
 CM_ SG_ 273 SB_CmdTimeoutWarn "Set after 50 ms without a valid command; SAFE_STOP after 100 ms.";
 
 BA_DEF_ BO_ "GenMsgCycleTime" INT 0 10000;

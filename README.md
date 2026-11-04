@@ -18,8 +18,11 @@ actuator. Fusion render, rev D.*
 
 In driverless mode the car's computer has to brake through the same pedal and
 master cylinders the driver uses. The driver must still be able to brake at any
-time, and with no power or no command the system has to fail safe. The
-Formula Student 2026 rules (T10, T11.9, T15) fix most of the constraints.
+time, and with no power or no command the system has to fail safe. The FSAE
+Rules 2026 and the FSAE Driverless Supplement 2026 (V4.0) fix most of the
+constraints: DT.3.1 (driverless system brake), DT.3.2 (emergency brake system),
+DT.2.2 (actuator decoupling), DO.2.3.1 (shutdown circuit), and T.3 brakes, with
+the 2000 N pedal load (T.3.2.2) and the brake over-travel switch (T.3.3).
 
 No team data was available, so the design sits on a **reference pedal box**
 built from typical FSAE numbers:
